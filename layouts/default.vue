@@ -1,8 +1,43 @@
 <template>
   <div>
+    <page-header></page-header>
     <nuxt/>
+    <div>
+      <pagination
+        :current="current"
+        :total="total"
+        @current-change="currentChange">
+      </pagination>
+    </div>
+    <page-bottom></page-bottom>
+
   </div>
 </template>
+
+<script>
+  import PageHeader from '~/components/PageHeader'
+  import PageBottom from '~/components/PageBottom'
+  import Pagination from '~/components/Pagination'
+  export default {
+    components: {
+      PageHeader,
+      PageBottom,
+      Pagination
+    },
+    data () {
+      return {
+        total: 1000,
+        current: 1
+      }
+    },
+    methods: {
+      currentChange (val) {
+        console.log(val)
+      }
+    }
+  }
+</script>
+
 
 <style>
 html {

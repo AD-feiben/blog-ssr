@@ -11,9 +11,11 @@ module.exports = {
       { hid: 'keyword', name: 'keyword', content: 'feiben' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', integrity: 'sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1', crossorigin: 'anonymous' }
     ]
   },
+  css: ['~/assets/styles/reset.less'],
   plugins: ['~plugins'],
   /*
   ** Customize the progress bar color

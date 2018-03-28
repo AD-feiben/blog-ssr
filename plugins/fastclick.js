@@ -1,7 +1,4 @@
-if (process.BROWSER_BUILD) {
-  const Vue = requrie('vue')
-  const FastClick = requrie('fastclick')
+import Vue from 'vue'
+import FastClick from 'fastclick'
 
-  FastClick.attach(document.body)
-  Vue.use(VueParticles)
-}
+FastClick.attach(document.body)

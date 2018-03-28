@@ -1,0 +1,87 @@
+/* 重置样式 */
+
+body, div, span, header, footer, nav, section, aside, article, ol, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  word-spacing: 1px;
+  border: none;
+  box-sizing: border-box;
+  font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  &:focus {
+      outline: none;
+  }
+}
+
+body{
+  min-height: 100vh;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+    -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none; }
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/* 通用样式 */
+@import './var.less';
+
+#__nuxt{
+  .hover-shadow{
+    transition: all .5s;
+    &:hover{
+      color: #fff;
+      text-shadow: 0 0 5px #fff;
+    }
+  }
+  a{
+    color: @themeColor;
+  }
+  .ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+/* 过渡效果 */
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
