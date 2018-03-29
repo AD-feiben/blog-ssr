@@ -10,11 +10,11 @@
     </p>
     <div class="nav-wrap">
       <ul class="nav">
-        <li><router-link to="/" class="hover-shadow" replace>首页</router-link></li>
-        <li><router-link to="/categories" class="hover-shadow" replace>分类</router-link></li>
-        <li><router-link to="/tags" class="hover-shadow" replace>标签</router-link></li>
-        <li><router-link to="/archives" class="hover-shadow" replace>归档</router-link></li>
-        <li><router-link to="/contact" class="hover-shadow" replace>联系我</router-link></li>
+        <li><nuxt-link to="/home" class="hover-shadow" replace>首页</nuxt-link></li>
+        <li><nuxt-link to="/categories" class="hover-shadow" replace>分类</nuxt-link></li>
+        <li><nuxt-link to="/tags" class="hover-shadow" replace>标签</nuxt-link></li>
+        <li><nuxt-link to="/archives" class="hover-shadow" replace>归档</nuxt-link></li>
+        <li><nuxt-link to="/contact" class="hover-shadow" replace>联系我</nuxt-link></li>
       </ul>
     </div>
   </header>
@@ -102,7 +102,7 @@ export default {
           font-size: @fs10;
           color: @themeColor;
           text-shadow: 0 0 5px @themeColor;
-          &.nuxt-link-exact-active{
+          &.active{
             color: #fff;
             text-shadow: 0 0 5px #fff;
           }

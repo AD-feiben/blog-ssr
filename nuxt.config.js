@@ -17,10 +17,13 @@ module.exports = {
   },
   css: ['~/assets/styles/reset.less'],
   plugins: ['~plugins'],
+  router: {
+    linkActiveClass: 'active'
+  },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#1f97f9' },
   /*
   ** Build configuration
   */

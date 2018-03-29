@@ -1,23 +1,8 @@
 <template>
   <div>
-    <page-header></page-header>
     <nuxt/>
-    <!-- <page-bottom></page-bottom> -->
-
   </div>
 </template>
-
-<script>
-  import PageHeader from '~/components/PageHeader'
-  import PageBottom from '~/components/PageBottom'
-  export default {
-    components: {
-      PageHeader,
-      PageBottom
-    }
-  }
-</script>
-
 
 <style>
 html {
