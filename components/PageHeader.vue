@@ -1,5 +1,5 @@
 <template lang="html">
-  <header id="page-header">
+  <header class="page-header">
     <div class="bg" :style="{backgroundImage: `url(${bgUrl || 'http://img3.iqilu.com/data/attachment/forum/201308/21/163544r6f4ftsysyldsiz6.jpg'})`}"></div>
     <div class="avatar-wrap">
       <img class="avatar" :src="avatar" :alt="author">
@@ -33,7 +33,7 @@ export default {
 
 <style lang="less">
   @import "../assets/styles/var.less";
-  #page-header{
+  .page-header{
     position: relative;
     width: 100%;
     text-align: center;

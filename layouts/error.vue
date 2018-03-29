@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="container-error">
-    <terminal :statusCode="error.statusCode"/>
-    <nuxt-link to="/">Home Page</nuxt-link>
+    <terminal :error="error"/>
+    <p class="go-home">👉<nuxt-link to="/">Home Page</nuxt-link></p>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import Terminal from '~/components/Terminal'
 export default {
   props: ['error'],
-  layout: 'error_layout',
+  layout: 'full_layout',
   components: {
     Terminal
   }
@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style lang="less">
+@import '../assets/styles/var.less';
 #container-error{
   display: flex;
   width: 100%;
@@ -24,10 +25,11 @@ export default {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  a{
-    &:hover{
-      text-decoration: underline;
-    }
+  .go-home{
+    font-size: @fs10;
+  }
+  a:hover{
+    text-decoration: underline;
   }
 }
 </style>

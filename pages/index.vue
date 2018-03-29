@@ -16,7 +16,8 @@ export default {
 
 <style lang="less">
 #nuxt-view{
-  width: 10rem;
+  width: 100%;
+  max-width: 680px;
   margin: 0 auto;
 }
 </style>

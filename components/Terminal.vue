@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="terminal-wrap">
+  <div class="terminal-wrap">
     <div class="terminal">
       <div class="terminal-top-bar">
         <span class="button red"></span>
@@ -13,16 +13,16 @@
 
 <script>
 export default {
-  props: ['statusCode'],
+  props: ['error'],
   computed: {
     hint () {
       let hint = ''
-      if (this.statusCode === 404) {
+      if (this.error.statusCode === 404) {
         hint = 'Page Not Found!'
       } else {
-        hint = 'An error occurred!'
+        hint = this.error.message || 'An error occurred!'
       }
-      return `${this.statusCode} ${hint}`
+      return `${this.error.statusCode} ${hint}`
     }
   },
   data () {
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="less">
-  #terminal-wrap{
+  .terminal-wrap{
     width: 100%;
     margin-top: -50px;
     margin-bottom: 20px;

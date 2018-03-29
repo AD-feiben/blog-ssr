@@ -1,5 +1,5 @@
 <template lang="html">
-  <ul id="pagination">
+  <ul class="pagination">
     <li :class="{disableClick: currentPage === 1}" @click="jump(-1)">&lt;</li>
 
     <li
@@ -77,10 +77,11 @@ export default {
 
 <style lang="less">
 @import '../assets/styles/var.less';
-#pagination{
+.pagination{
   display: inline-flex;
   -moz-user-select: none;
   -webkit-user-select: none;
+  margin: 20px 0;
   li{
     width: @fs20;
     height: @fs20;

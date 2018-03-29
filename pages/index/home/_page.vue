@@ -1,16 +1,25 @@
 <template>
   <section class="container">
-    <p v-for="item in articles" :key="item.id">{{item.title}}</p>
-    <pagination :total="total" :current="current" @current-change="currentChange"></pagination>
+    <writing :articles="articles"></writing>
+
+    <div class="pagination-wrap">
+      <pagination
+        :total="total"
+        :current="current"
+        @current-change="currentChange"></pagination>
+    </div>
+
   </section>
 </template>
 
 <script>
+import Writing from '~/components/Writing'
 import Pagination from '~/components/Pagination'
 import { axiosGet } from '~/assets/axios'
 import api from '~/assets/api'
 export default {
   components: {
+    Writing,
     Pagination
   },
   async asyncData ({ params, error }) {
@@ -18,8 +27,11 @@ export default {
     page = parseInt(page) || 1
     const res = await axiosGet(api.article, {page})
     if (res.code === 200) {
-      res.data.total = 20
-      return {...res.data, current: page}
+      if (res.data.articles.length) {
+        return {...res.data, current: page}
+      } else {
+        error({ statusCode: '', message: '查无数据！' })
+      }
     } else {
       error({ statusCode: res.code, message: res.message })
     }
@@ -31,3 +43,10 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+.pagination-wrap{
+  text-align: center;
+}
+</style>
+

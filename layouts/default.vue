@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header></page-header>
+    <!-- <page-header></page-header> -->
     <nuxt/>
     <!-- <page-bottom></page-bottom> -->
 

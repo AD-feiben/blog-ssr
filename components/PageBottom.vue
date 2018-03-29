@@ -1,5 +1,5 @@
 <template lang="html">
-  <footer id="page-bottom">
+  <footer class="page-bottom">
     <p class="m-bottom-top">
       <span>{{author}}</span>
       <i class="fas fa-heart"></i>
@@ -39,7 +39,7 @@ export default {
 
 <style lang="less">
   @import '../assets/styles/var.less';
-  #page-bottom{
+  .page-bottom{
     padding: 20px;
     text-align: center;
     line-height: @fs14;
