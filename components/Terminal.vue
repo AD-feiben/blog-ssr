@@ -18,9 +18,9 @@ export default {
     hint () {
       let hint = ''
       if (this.error.statusCode === 404) {
-        hint = 'Page Not Found!'
+        hint = '页面不存在!'
       } else {
-        hint = this.error.message || 'An error occurred!'
+        hint = this.error.message || '应用发生错误异常!'
       }
       return `${this.error.statusCode} ${hint}`
     }

@@ -8,14 +8,14 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'If you\'re going to try, go all the way!' },
-      { hid: 'keyword', name: 'keyword', content: 'feiben' }
+      { hid: 'keyword', name: 'keyword', content: 'feiben,blog' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', integrity: 'sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1', crossorigin: 'anonymous' }
     ]
   },
-  css: ['~/assets/styles/reset.less'],
+  css: ['~/assets/styles/reset.less', '~/assets/styles/hljs.css'],
   plugins: ['~plugins'],
   router: {
     linkActiveClass: 'active'

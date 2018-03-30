@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="home-container">
     <writing :articles="articles"></writing>
 
     <div class="pagination-wrap">

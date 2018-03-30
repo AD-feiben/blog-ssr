@@ -1,8 +1,8 @@
 <template>
   <div>
-    <!-- <page-header></page-header> -->
+    <page-header></page-header>
     <nuxt/>
-    <!-- <page-bottom></page-bottom> -->
+    <page-bottom></page-bottom>
 
   </div>
 </template>
@@ -10,10 +10,20 @@
 <script>
   import PageHeader from '~/components/PageHeader'
   import PageBottom from '~/components/PageBottom'
+  const { author, description } = require('~/assets/config').default
   export default {
     components: {
       PageHeader,
       PageBottom
+    },
+    head () {
+      return {
+        title: `${author}的博客`,
+        meta: [
+          { hid: 'keyword', name: 'keyword', content: `${author},blog` },
+          { hid: 'description', name: 'description', content: description },
+        ]
+      }
     }
   }
 </script>

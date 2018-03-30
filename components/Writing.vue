@@ -2,7 +2,7 @@
   <div class="writing">
     <ul>
       <li v-for="article in articles" :key="article._id">
-        <nuxt-link class="writing-item" :to="{path: `/detail/${article._id}`}">
+        <nuxt-link class="writing-item" :to="{path: `/detail/${article._id}`}" target="_blank">
           <div class="writing-text">
             <h3 class="writing-title" :title="article.title">
               <span>{{article.title}}</span>
