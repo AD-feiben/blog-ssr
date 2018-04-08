@@ -31,6 +31,10 @@ const configure = {
     weibo: '',
     jianshu: 'https://www.jianshu.com/u/ccb05861b473'
   },
+  feedback: {
+    email: 'feiben.dev@gmail.com',
+    githubIssues: 'https://github.com/AD-feiben/blog-ssr/issues'
+  },
   // 赞赏提示信息
   reward: '如果觉得我的文章对您有用，请随意赞赏。您的支持将鼓励我继续创作！',
   // 微信收款二维码

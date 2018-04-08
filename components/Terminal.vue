@@ -6,7 +6,7 @@
         <span class="button yellow"></span>
         <span class="button green"></span>
       </div>
-      <p>➜  ~ {{hintText}}<span class="cursor">|</span></p>
+      <p>➜  {{path}} {{hintText}}<span class="cursor">|</span></p>
     </div>
   </div>
 </template>
@@ -27,6 +27,7 @@ export default {
   },
   data () {
     return {
+      path: this.$route.path,
       hintText: ''
     }
   },
@@ -70,13 +71,14 @@ export default {
   .terminal{
     position: relative;
     width: 9rem;
-    height: 6.5rem;
+    height: 6rem;
     margin: 0 auto;
     padding-top: 20px;
     overflow: hidden;
     border-radius: 6px;
     color: #7af94d;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .7);
+    text-shadow: 0 0 5px #7af94d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .6);
     background-color: #050506;
   }
   .terminal-top-bar{
@@ -84,23 +86,23 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 3px 4px 0;
+    padding: 3px 4px 1px;
     background-color: #e4e2e4;
     .button{
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       margin: 0 3px;
       border-radius: 50%;
     }
     .red{
-      background-color: #ee6d62;
+      background-color: #E0443E;
     }
     .yellow{
-      background-color: #f7c351;
+      background-color: #DEA123;
     }
     .green{
-      background-color: #62c655;
+      background-color: #1AAB29;
     }
   }
 </style>

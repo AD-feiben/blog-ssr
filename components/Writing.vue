@@ -69,7 +69,6 @@ export default {
   .writing-item{
     display: flex;
     width: 100%;
-    padding: 10px;
     align-items: center;
     .writing-text{
       flex: 1;

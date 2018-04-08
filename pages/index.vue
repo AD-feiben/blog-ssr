@@ -20,5 +20,7 @@ export default {
   min-height: 64vh;
   max-width: 680px;
   margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 </style>

@@ -9,7 +9,7 @@ const instance = axios.create({baseURL})
 instance.interceptors.request.use(function (config) {
   // 公共参数
   let commomParams = {state: 1}
-  commomParams = {}
+  // commomParams = {}
   if (config.method === 'get') {
     config.params = { ...config.params, ...commomParams }
   } else if (config.method === 'post') {
