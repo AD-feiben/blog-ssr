@@ -4,7 +4,7 @@ const configure = {
   // 描述
   description: `If you're going to try, go all the way!`,
   // 头像地址
-  avatar: 'https://upload-images.jianshu.io/upload_images/1917079-1ec6c3a409c83885.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
+  avatar: 'https://upload-images.jianshu.io/upload_images/1917079-b62f4dfd279c5523.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240',
   // 背景图
   bgUrl: 'http://img3.iqilu.com/data/attachment/forum/201308/21/163544r6f4ftsysyldsiz6.jpg',
   // 文章列表分割线

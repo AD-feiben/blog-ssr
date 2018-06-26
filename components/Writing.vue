@@ -3,7 +3,7 @@
     <ul>
       <li v-for="article in articles" :key="article._id">
         <nuxt-link class="writing-item" :to="{path: `/detail/${article._id}`}" target="_blank">
-          <div class="writing-text">
+          <div class="writing-text" :class="{noImg: !article.cover}">
             <h3 class="writing-title" :title="article.title">
               <span>{{article.title}}</span>
             </h3>
@@ -75,6 +75,10 @@ export default {
       max-width: calc(100% - 130px);
       margin-right: 10px;
       font-size: @fs10;
+      &.noImg{
+        max-width: 100%;
+        margin-right: 0;
+      }
     }
     .writing-title{
       overflow : hidden;
