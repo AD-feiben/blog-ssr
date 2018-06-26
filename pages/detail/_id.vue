@@ -106,8 +106,8 @@ export default {
   margin: 0 auto;
   .content{
     word-break: break-all;
-    font-size: 10px;
-    color: #555;
+    font-size: 12px;
+    color: #333;
     li{display:list-item}
     head{display:none}
     table{
@@ -171,8 +171,8 @@ export default {
     h1,h2,h3,h4,h5,h6,b,strong{font-weight:bolder}
     i,cite,em,var,address{font-style:italic}
     pre,code{
-      color: #abb2bf;
-      background: #292c33;
+      color: #000;
+      background: #f6f6f6;
       overflow-x: scroll;
     }
     // pre,tt,code,kbd,samp{font-family:monospace}
