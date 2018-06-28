@@ -36,7 +36,7 @@
 > nuxt start
 > ```
 
-然后我在服务器上运行的时候就可以访问，一断开 ssh 连接，服务也就挂了。然后我在网上查找关于 Nuxt 部署的问题，看到很多人还以为和非服务端渲染一样，要打包之后用 ftp 上传到服务器再用 nginx 方向代理。 **需要注意的是 Nuxt 服务端渲染也是一个 Node 应用** ，所以还是和服务端代码一样使用 pm2 开启服务，命令如下 `pm2 start npm -- start`，服务端渲染[源码在此](https://github.com/AD-feiben/blog-ssr)，如果你想在本地开发，可以修改`assets/config.js`来修改页面配置。
+然后我在服务器上运行的时候就可以访问，一断开 ssh 连接，服务也就挂了。然后我在网上查找关于 Nuxt 部署的问题，看到很多人还以为和非服务端渲染一样，要打包之后用 ftp 上传到服务器再用 nginx 反向代理。 **需要注意的是 Nuxt 服务端渲染也是一个 Node 应用** ，所以还是和服务端代码一样使用 pm2 开启服务，命令如下 `pm2 start npm -- start`，服务端渲染[源码在此](https://github.com/AD-feiben/blog-ssr)，如果你想在本地开发，可以修改`assets/config.js`来修改页面配置。
 
 ## 管理后台
 
