@@ -24,7 +24,7 @@ const configure = {
   friendLinks: [
     {
       name: '飞奔',
-      link: 'http://isfeiben.com'
+      link: 'http://feiben.xyz'
     }
   ],
   // 网站备案信息
