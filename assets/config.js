@@ -1,6 +1,12 @@
 const configure = {
   // 作者姓名
   author: '飞奔',
+  // SEO
+  title: '飞奔 | 飞奔的博客 ，前端develop，技术分享，不止前端，Not only front-end!',
+  // 关键字 SEO
+  keywords: '飞奔,飞奔的博客,前端develop,技术分享,不止前端,feiben,blog,feiben\’s blog,Not only front-end!',
+  // 描述 SEO
+  descriptionSeo: `飞奔的博客是用来发表前端以及其他技术的文章，微信公众号 前端develop，技术分享，Not only front-end!`,
   // 描述
   description: `If you're going to try, go all the way!`,
   // 头像地址

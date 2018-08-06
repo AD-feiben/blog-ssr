@@ -35,6 +35,7 @@ import { axiosGet } from '~/assets/axios'
 import api from '~/assets/api'
 import marked from 'marked'
 import highlight from 'highlight.js'
+const { title, keywords } = require('~/assets/config').default
 export default {
   layout: 'full_layout',
   components: {
@@ -55,12 +56,12 @@ export default {
   },
   head () {
     return {
-      title: this.title,
+      title: this.title + '，' + title,
       script: [
         { src: 'https://cdn-city.livere.com/js/embed.dist.js', async: true}
       ],
       meta: [
-        { hid: 'keyword', name: 'keyword', content: `${this.classify},${this.tags}` }
+        { hid: 'keywords', name: 'keywords', content: `${this.classify},${this.tags},${keywords}` }
       ]
     }
   },

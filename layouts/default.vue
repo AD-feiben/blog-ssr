@@ -10,7 +10,7 @@
 <script>
   import PageHeader from '~/components/PageHeader'
   import PageBottom from '~/components/PageBottom'
-  const { author, description } = require('~/assets/config').default
+  const { title, keywords, descriptionSeo } = require('~/assets/config').default
   export default {
     components: {
       PageHeader,
@@ -18,10 +18,10 @@
     },
     head () {
       return {
-        title: `${author}的博客`,
+        title: title,
         meta: [
-          { hid: 'keyword', name: 'keyword', content: `${author},blog` },
-          { hid: 'description', name: 'description', content: description },
+          { hid: 'keywords', name: 'keywords', content: keywords },
+          { hid: 'description', name: 'description', content: descriptionSeo },
         ]
       }
     }
