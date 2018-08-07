@@ -16,7 +16,6 @@
       <pagination
         :total="total"
         :current="current"
-        :pageSize="2"
         @current-change="currentChange"></pagination>
     </div>
 
@@ -39,7 +38,7 @@ export default {
     classify = classify || ''
     tag = classify ? '' : tag || ''
     page = parseInt(page) || 1
-    const res = await axiosGet(api.article, {tag, classify, page, pageSize: 2})
+    const res = await axiosGet(api.article, {tag, classify, page})
     if (res.code === 200) {
       if (res.data.articles.length) {
         return {...res.data, current: page, tag, classify}

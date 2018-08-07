@@ -102,7 +102,7 @@ export default {
           font-size: @fs10;
           color: @themeColor;
           text-shadow: 0 0 5px @themeColor;
-          &.active{
+          &.nuxt-link-exact-active{
             color: #fff;
             text-shadow: 0 0 5px #fff;
           }
