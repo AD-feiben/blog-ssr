@@ -6,8 +6,6 @@ module.exports = {
     title: '飞奔 | 飞奔的博客 ， 前端develop，技术分享，不止前端，Not only front-end!',
     meta: [
       { charset: 'utf-8' },
-      { name: 'baidu-site-verification', content: 'q3vX2LK8f6' },
-      { name: 'google-site-verification', content: 'kNnYOpNXNeWGs1DJQOG_8X7H_5xEYPtCnks1SrW9hDw' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '飞奔的博客是用来发表前端以及其他技术的文章，微信公众号 前端develop，技术分享，Not only front-end!' },
       { hid: 'keywords', name: 'keywords', content: '飞奔,飞奔的博客,前端develop,技术分享,不止前端,feiben,blog,feiben\’s blog,Not only front-end!' }
