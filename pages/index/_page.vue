@@ -16,6 +16,7 @@
       <pagination
         :total="total"
         :current="current"
+        :pageSize="2"
         @current-change="currentChange"></pagination>
     </div>
 
@@ -38,7 +39,7 @@ export default {
     classify = classify || ''
     tag = classify ? '' : tag || ''
     page = parseInt(page) || 1
-    const res = await axiosGet(api.article, {tag, classify, page})
+    const res = await axiosGet(api.article, {tag, classify, page, pageSize: 2})
     if (res.code === 200) {
       if (res.data.articles.length) {
         return {...res.data, current: page, tag, classify}
@@ -54,14 +55,14 @@ export default {
       this.$router.replace(this.classify ? '/categories' : '/tags')
     },
     currentChange (val) {
-      this.$router.replace(`/home/${val}?classify=${this.classify || ''}&tag=${this.tag || ''}`)
+      this.$router.replace(`/${val}?classify=${this.classify || ''}&tag=${this.tag || ''}`)
     }
   }
 }
 </script>
 
 <style lang="less">
-@import '../../../assets/styles/var.less';
+@import '../../assets/styles/var.less';
 .tag-wrap{
   margin-bottom: 10px;
 }

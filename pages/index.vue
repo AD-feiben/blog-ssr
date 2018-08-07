@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  fetch ({route, redirect }) {
-    if (route.path === '/') {
-      return redirect('/home')
-    }
-  }
+  // fetch ({route, redirect }) {
+  //   if (route.path === '/') {
+  //     return redirect('/')
+  //   }
+  // }
 }
 </script>
 

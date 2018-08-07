@@ -10,7 +10,7 @@
     </p>
     <div class="nav-wrap">
       <ul class="nav">
-        <li><nuxt-link to="/home" class="hover-shadow" replace>首页</nuxt-link></li>
+        <li><nuxt-link to="/" class="hover-shadow" replace>首页</nuxt-link></li>
         <li><nuxt-link to="/categories" class="hover-shadow" replace>分类</nuxt-link></li>
         <li><nuxt-link to="/tags" class="hover-shadow" replace>标签</nuxt-link></li>
         <li><nuxt-link to="/archives" class="hover-shadow" replace>归档</nuxt-link></li>
