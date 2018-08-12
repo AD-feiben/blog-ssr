@@ -10,7 +10,7 @@
     </p>
     <div class="nav-wrap">
       <ul class="nav">
-        <li><nuxt-link to="/" class="hover-shadow" replace>首页</nuxt-link></li>
+        <li><nuxt-link to="/" class="hover-shadow" :class="{'nuxt-link-exact-active': isHomePage}" replace>首页</nuxt-link></li>
         <li><nuxt-link to="/categories" class="hover-shadow" replace>分类</nuxt-link></li>
         <li><nuxt-link to="/tags" class="hover-shadow" replace>标签</nuxt-link></li>
         <li><nuxt-link to="/archives" class="hover-shadow" replace>归档</nuxt-link></li>
@@ -25,8 +25,17 @@ import config from '~/assets/config'
 export default {
   data () {
     return {
+      isHomePage: false,
       ...config
     }
+  },
+  watch: {
+    $route: function (newVal) {
+      this.isHomePage = newVal.name === 'index-page'
+    }
+  },
+  mounted () {
+    this.isHomePage = this.$route.name === 'index-page'
   }
 }
 </script>
