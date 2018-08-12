@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     goPage (classify) {
-      this.$router.push(`/home/1?classify=${classify}`)
+      this.$router.push(`/1?classify=${classify}`)
     }
   }
 }

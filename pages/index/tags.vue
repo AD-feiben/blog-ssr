@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     goPage (tag) {
-      this.$router.push(`/home/1?tag=${tag}`)
+      this.$router.push(`/1?tag=${tag}`)
     }
   }
 }
