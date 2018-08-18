@@ -3,6 +3,10 @@
     <ul>
       <li v-for="article in articles" :key="article._id">
         <nuxt-link class="writing-item" :to="{path: `/detail/${article._id}`}" target="_blank">
+          <div class="writing-img" v-if="article.cover">
+            <img :src="article.cover">
+          </div>
+
           <div class="writing-text" :class="{noImg: !article.cover}">
             <h3 class="writing-title" :title="article.title">
               <span>{{article.title}}</span>
@@ -32,9 +36,6 @@
 
           </div>
 
-          <div class="writing-img" v-if="article.cover">
-            <img :src="article.cover">
-          </div>
         </nuxt-link>
         <divider class="writing-divider">{{divider}}</divider>
       </li>
@@ -68,6 +69,7 @@ export default {
 .writing{
   .writing-item{
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
     align-items: center;
     .writing-text{
@@ -164,6 +166,20 @@ export default {
   }
   li:nth-last-of-type(1) .writing-divider{
     display: none;
+  }
+
+  @media (max-width: 450px) {
+    .writing-item{
+      display: block;
+      .writing-text{
+        max-width: 100%;
+      }
+      .writing-img{
+        width: 100%;
+        max-height: 120px;
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 </style>
