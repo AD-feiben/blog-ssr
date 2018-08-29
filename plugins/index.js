@@ -2,8 +2,8 @@ let plugins = []
 
 if (process.browser) {
   plugins = [
-    require('./fastclick'),
-    require('lib-flexible')
+    // require('lib-flexible'),
+    require('./fastclick')
   ]
 }
 

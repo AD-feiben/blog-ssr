@@ -13,6 +13,9 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.0.9/css/all.css', integrity: 'sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1', crossorigin: 'anonymous' }
+    ],
+    script: [
+      { src: 'http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js', type: 'text/javascript', charset: 'utf-8' }
     ]
   },
   css: ['~/assets/styles/reset.less', '~/assets/styles/hljs.css'],
@@ -39,7 +42,7 @@ module.exports = {
         propBlackList: ['border'] // 如果要保持font-size不转换，替换为 ['font-size']
       })
     ],
-    vendor: ['lib-flexible', 'fastclick'],
+    vendor: ['fastclick'],
     /*
     ** Run ESLint on save
     */
