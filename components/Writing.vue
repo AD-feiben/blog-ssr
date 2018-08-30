@@ -72,6 +72,9 @@ export default {
     flex-direction: row-reverse;
     width: 100%;
     align-items: center;
+    &:hover{
+      text-decoration: none;
+    }
     .writing-text{
       flex: 1;
       max-width: calc(100% - 130px);
