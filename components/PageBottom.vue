@@ -42,8 +42,8 @@ export default {
   .page-bottom{
     padding: 20px;
     text-align: center;
-    line-height: @fs14;
-    font-size: @fs8;
+    line-height: @fs20;
+    font-size: @fs10;
     color: @info;
     background-color: @bgColor;
     .fa-heart{

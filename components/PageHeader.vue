@@ -1,5 +1,5 @@
 <template lang="html">
-  <header class="page-header">
+  <header class="page-header" ref="header">
     <div class="bg" :style="{backgroundImage: `url(${bgUrl || 'http://img3.iqilu.com/data/attachment/forum/201308/21/163544r6f4ftsysyldsiz6.jpg'})`}"></div>
     <div class="avatar-wrap">
       <img class="avatar" :src="avatar" :alt="author">
@@ -8,7 +8,7 @@
     <p class="description-wrap">
       <span class="description hover-shadow">{{description}}</span>
     </p>
-    <div class="nav-wrap">
+    <div class="nav-wrap" ref="nav" :class="{fixed: navFixed}">
       <ul class="nav">
         <li><nuxt-link to="/" class="hover-shadow" :class="{'nuxt-link-exact-active': isHomePage}" replace>首页</nuxt-link></li>
         <li><nuxt-link to="/categories" class="hover-shadow" replace>分类</nuxt-link></li>
@@ -26,6 +26,7 @@ export default {
   data () {
     return {
       isHomePage: false,
+      navFixed: false,
       ...config
     }
   },
@@ -34,8 +35,19 @@ export default {
       this.isHomePage = newVal.name === 'index-page'
     }
   },
+  methods: {
+    scrollHandle () {
+      let scrollDistance = this.$refs.header.offsetHeight - this.$refs.nav.offsetHeight
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+      this.navFixed = scrollTop > scrollDistance
+    }
+  },
   mounted () {
     this.isHomePage = this.$route.name === 'index-page'
+    this.$nextTick (() => {
+      this.scrollHandle()
+    })
+    window.onscroll = this.scrollHandle
   }
 }
 </script>
@@ -48,6 +60,8 @@ export default {
     text-align: center;
     color: #fff;
     overflow: hidden;
+    padding-bottom: 47px;
+    box-sizing: border-box;
     .bg{
       position: absolute;
       z-index: -1;
@@ -95,7 +109,20 @@ export default {
       font-size: @fs10;
     }
     .nav-wrap{
-      margin: 10px 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 0;
+      transition: all .5s;
+      &.fixed{
+        position: fixed;
+        top: 0;
+        bottom: initial;
+        background: rgba(0, 0, 0, .65);
+        box-shadow: 0 0 20px 5px rgba(0, 0, 0, .5);
+        z-index: 999;
+      }
     }
     .nav{
       display: flex;
