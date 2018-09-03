@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-let baseURL = 'http://202.5.16.37:3000'
+let baseURL = 'http://feiben.xyz/api'
 
 const instance = axios.create({baseURL})
 
