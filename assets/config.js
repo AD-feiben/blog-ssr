@@ -46,7 +46,9 @@ const configure = {
   // 微信收款二维码
   wechatReceive: require('~/assets/images/wechatReceive.jpg'),
   // 支付宝收款二维码
-  aliReceive: require('~/assets/images/aliReceive.jpg')
+  aliReceive: require('~/assets/images/aliReceive.jpg'),
+  // 用于埋点
+  siteId: '1274633992'
 }
 
 export default configure

@@ -3,7 +3,8 @@ let plugins = []
 if (process.browser) {
   plugins = [
     // require('lib-flexible'),
-    require('./fastclick')
+    require('./fastclick'),
+    require('./uweb')
   ]
 }
 

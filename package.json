@@ -25,7 +25,8 @@
     "lib-flexible": "^0.3.2",
     "marked": "^0.3.19",
     "nuxt": "^1.0.0",
-    "qs": "^6.5.1"
+    "qs": "^6.5.1",
+    "vue-uweb": "^0.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
