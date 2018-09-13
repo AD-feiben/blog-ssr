@@ -62,6 +62,7 @@ export default {
     overflow: hidden;
     padding-bottom: 47px;
     box-sizing: border-box;
+    z-index: 1;
     .bg{
       position: absolute;
       z-index: -1;

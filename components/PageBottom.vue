@@ -40,12 +40,14 @@ export default {
 <style lang="less">
   @import '../assets/styles/var.less';
   .page-bottom{
+    position: relative;
     padding: 20px;
     text-align: center;
     line-height: @fs20;
     font-size: @fs10;
     color: @info;
     background-color: @bgColor;
+    z-index: 1;
     .fa-heart{
       margin: 0 2px;
     }
