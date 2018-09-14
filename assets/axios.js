@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-let baseURL = 'http://feiben.xyz/api'
+let baseURL = 'http://feiben.xyz/api' // develop in local use http://localhost:3000
 
 const instance = axios.create({baseURL})
 
