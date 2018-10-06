@@ -21,7 +21,8 @@ module.exports = {
   css: ['~/assets/styles/reset.less', '~/assets/styles/hljs.css'],
   plugins: ['~plugins'],
   router: {
-    linkActiveClass: 'active'
+    linkActiveClass: 'active',
+    base: '/v1/'
   },
   /*
   ** Customize the progress bar color
